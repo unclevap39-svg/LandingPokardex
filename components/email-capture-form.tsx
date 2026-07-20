@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useId, useState, type FormEvent } from "react";
 import { Check, Loader2, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 type Status = "idle" | "loading" | "success" | "error";
 
 export function EmailCaptureForm({ className }: { className?: string }) {
+  const inputId = useId();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
 
@@ -50,8 +51,12 @@ export function EmailCaptureForm({ className }: { className?: string }) {
   return (
     <form onSubmit={handleSubmit} className={cn("flex flex-col gap-2 sm:flex-row", className)}>
       <div className="relative flex-1">
+        <label htmlFor={inputId} className="sr-only">
+          Adresse e-mail
+        </label>
         <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
         <Input
+          id={inputId}
           type="email"
           required
           value={email}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sora, Manrope, JetBrains_Mono } from "next/font/google";
+import { MotionProvider } from "@/components/motion-provider";
 import "./globals.css";
 
 const sora = Sora({
@@ -65,7 +66,7 @@ export default function RootLayout({
       className={`${sora.variable} ${manrope.variable} ${jetbrainsMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

@@ -60,7 +60,7 @@ export function Nav() {
 
         <button
           aria-label="Ouvrir le menu"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-foreground md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-foreground md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
