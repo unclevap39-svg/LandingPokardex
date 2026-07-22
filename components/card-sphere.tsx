@@ -79,7 +79,9 @@ function Cards({ progress, reducedMotion }: { progress: MotionValue<number>; red
       const opacity = Math.max(0, 1 - fadeT);
       const material = mesh.material as THREE.MeshBasicMaterial;
       material.opacity = opacity;
-      material.transparent = true;
+      // Skip drawing fully-faded cards instead of blending a fully
+      // transparent quad every frame — cuts overdraw once exploded.
+      mesh.visible = opacity > 0.01;
 
       const scale = 1 - eased * 0.35;
       mesh.scale.setScalar(Math.max(0.1, scale));
@@ -96,7 +98,8 @@ function Cards({ progress, reducedMotion }: { progress: MotionValue<number>; red
           }}
         >
           <planeGeometry args={[CARD_WIDTH, CARD_HEIGHT]} />
-          <meshBasicMaterial map={card.texture} toneMapped={false} side={THREE.DoubleSide} transparent />
+          {/* FrontSide only: rotateZ spins cards in-plane, the back never faces the camera. */}
+          <meshBasicMaterial map={card.texture} toneMapped={false} transparent />
         </mesh>
       ))}
     </group>
@@ -113,8 +116,8 @@ export function CardSphere({ progress }: { progress: MotionValue<number> }) {
 
   return (
     <Canvas
-      dpr={[1, 1.75]}
-      gl={{ antialias: true, alpha: true }}
+      dpr={[1, 1.5]}
+      gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       camera={{ position: [0, 0, 8.5], fov: 42 }}
       className="!touch-auto"
     >

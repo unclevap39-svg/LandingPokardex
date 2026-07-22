@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,11 +29,27 @@ export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const scrollHintRef = useRef<HTMLDivElement>(null);
+  const [sphereInView, setSphereInView] = useState(true);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
   });
+
+  // The WebGL scene is expensive to keep rendering every frame — once the
+  // hero has scrolled well out of view it was still redrawing 33 planes
+  // forever underneath the rest of the page, causing scroll jank further
+  // down. Fully unmount it outside a generous viewport margin instead.
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setSphereInView(entry.isIntersecting),
+      { rootMargin: "35% 0px" }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   // Applied imperatively (not via style={{opacity: motionValue}}) — Framer's
   // native scroll-timeline optimization was desyncing from scrollYProgress
@@ -63,7 +79,7 @@ export function Hero() {
         />
 
         <div className="pointer-events-none absolute inset-0 z-0">
-          <CardSphere progress={scrollYProgress} />
+          {sphereInView && <CardSphere progress={scrollYProgress} />}
         </div>
 
         <div
