@@ -1,0 +1,200 @@
+[
+  {
+    "id": "base1-10",
+    "name": "Mewtwo",
+    "set": "base1",
+    "file": "/cards/base1-10.webp"
+  },
+  {
+    "id": "base1-6",
+    "name": "Gyarados",
+    "set": "base1",
+    "file": "/cards/base1-6.webp"
+  },
+  {
+    "id": "base1-58",
+    "name": "Pikachu",
+    "set": "base1",
+    "file": "/cards/base1-58.webp"
+  },
+  {
+    "id": "base1-4",
+    "name": "Charizard",
+    "set": "base1",
+    "file": "/cards/base1-4.webp"
+  },
+  {
+    "id": "neo1-9",
+    "name": "Lugia",
+    "set": "neo1",
+    "file": "/cards/neo1-9.webp"
+  },
+  {
+    "id": "neo1-70",
+    "name": "Pikachu",
+    "set": "neo1",
+    "file": "/cards/neo1-70.webp"
+  },
+  {
+    "id": "ex1-101",
+    "name": "Mewtwo ex",
+    "set": "ex1",
+    "file": "/cards/ex1-101.webp"
+  },
+  {
+    "id": "ex1-7",
+    "name": "Gardevoir",
+    "set": "ex1",
+    "file": "/cards/ex1-7.webp"
+  },
+  {
+    "id": "dp1-6",
+    "name": "Lucario",
+    "set": "dp1",
+    "file": "/cards/dp1-6.webp"
+  },
+  {
+    "id": "dp1-37",
+    "name": "Snorlax",
+    "set": "dp1",
+    "file": "/cards/dp1-37.webp"
+  },
+  {
+    "id": "dp1-27",
+    "name": "Gengar",
+    "set": "dp1",
+    "file": "/cards/dp1-27.webp"
+  },
+  {
+    "id": "bw1-71",
+    "name": "Zoroark",
+    "set": "bw1",
+    "file": "/cards/bw1-71.webp"
+  },
+  {
+    "id": "bw1-115",
+    "name": "Pikachu",
+    "set": "bw1",
+    "file": "/cards/bw1-115.webp"
+  },
+  {
+    "id": "xy1-73",
+    "name": "Zoroark",
+    "set": "xy1",
+    "file": "/cards/xy1-73.webp"
+  },
+  {
+    "id": "xy1-42",
+    "name": "Pikachu",
+    "set": "xy1",
+    "file": "/cards/xy1-42.webp"
+  },
+  {
+    "id": "xy1-41",
+    "name": "Greninja",
+    "set": "xy1",
+    "file": "/cards/xy1-41.webp"
+  },
+  {
+    "id": "xy1-30",
+    "name": "M Blastoise EX",
+    "set": "xy1",
+    "file": "/cards/xy1-30.webp"
+  },
+  {
+    "id": "sm1-96",
+    "name": "Dragonite",
+    "set": "sm1",
+    "file": "/cards/sm1-96.webp"
+  },
+  {
+    "id": "sm1-80",
+    "name": "Umbreon GX",
+    "set": "sm1",
+    "file": "/cards/sm1-80.webp"
+  },
+  {
+    "id": "sm1-61",
+    "name": "Espeon GX",
+    "set": "sm1",
+    "file": "/cards/sm1-61.webp"
+  },
+  {
+    "id": "sm1-22",
+    "name": "Arcanine",
+    "set": "sm1",
+    "file": "/cards/sm1-22.webp"
+  },
+  {
+    "id": "swsh1-85",
+    "name": "Gengar",
+    "set": "swsh1",
+    "file": "/cards/swsh1-85.webp"
+  },
+  {
+    "id": "swsh1-65",
+    "name": "Pikachu",
+    "set": "swsh1",
+    "file": "/cards/swsh1-65.webp"
+  },
+  {
+    "id": "swsh1-23",
+    "name": "Ninetales",
+    "set": "swsh1",
+    "file": "/cards/swsh1-23.webp"
+  },
+  {
+    "id": "swsh1-206",
+    "name": "Snorlax VMAX",
+    "set": "swsh1",
+    "file": "/cards/swsh1-206.webp"
+  },
+  {
+    "id": "swsh12-211",
+    "name": "Lugia VSTAR",
+    "set": "swsh12",
+    "file": "/cards/swsh12-211.webp"
+  },
+  {
+    "id": "swsh12-202",
+    "name": "Lugia VSTAR",
+    "set": "swsh12",
+    "file": "/cards/swsh12-202.webp"
+  },
+  {
+    "id": "swsh12-186",
+    "name": "Lugia V",
+    "set": "swsh12",
+    "file": "/cards/swsh12-186.webp"
+  },
+  {
+    "id": "swsh12-185",
+    "name": "Lugia V",
+    "set": "swsh12",
+    "file": "/cards/swsh12-185.webp"
+  },
+  {
+    "id": "sv01-245",
+    "name": "Gardevoir ex",
+    "set": "sv01",
+    "file": "/cards/sv01-245.webp"
+  },
+  {
+    "id": "sv01-228",
+    "name": "Gardevoir ex",
+    "set": "sv01",
+    "file": "/cards/sv01-228.webp"
+  },
+  {
+    "id": "sv01-225",
+    "name": "Gyarados ex",
+    "set": "sv01",
+    "file": "/cards/sv01-225.webp"
+  },
+  {
+    "id": "sv01-224",
+    "name": "Arcanine ex",
+    "set": "sv01",
+    "file": "/cards/sv01-224.webp"
+  }
+]
